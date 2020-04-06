@@ -90,10 +90,5 @@ namespace X07_Total
 
             this.Close();
         }
-
-        private void FrameHeaderProduceForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

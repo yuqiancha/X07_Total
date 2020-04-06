@@ -49,6 +49,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -148,8 +150,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle121 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tabControlExtra1 = new System.Windows.Forms.TabControlExtra();
             this.tabPage_yk = new System.Windows.Forms.TabPage();
@@ -376,6 +376,12 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_saveEnable = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column_btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_foldertext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_RecvdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_start = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label82 = new System.Windows.Forms.Label();
             this.panel_GNSS = new System.Windows.Forms.Panel();
@@ -545,12 +551,6 @@
             this.openFileDialog_da = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_da = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_saveEnable = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column_btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_foldertext = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_RecvdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_start = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -744,7 +744,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox4, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 1);
@@ -771,7 +771,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(329, 177);
+            this.groupBox4.Size = new System.Drawing.Size(328, 177);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "发送帧";
@@ -784,7 +784,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(325, 159);
+            this.textBox2.Size = new System.Drawing.Size(324, 159);
             this.textBox2.TabIndex = 15;
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
@@ -797,7 +797,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(329, 177);
+            this.groupBox2.Size = new System.Drawing.Size(328, 177);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "发送帧";
@@ -810,7 +810,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(325, 159);
+            this.textBox1.Size = new System.Drawing.Size(324, 159);
             this.textBox1.TabIndex = 15;
             this.textBox1.Click += new System.EventHandler(this.textBox3_Click);
             // 
@@ -1580,11 +1580,11 @@
             this.groupBox6.Controls.Add(this.button16);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox6.Location = new System.Drawing.Point(686, 3);
+            this.groupBox6.Location = new System.Drawing.Point(685, 3);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(228, 177);
+            this.groupBox6.Size = new System.Drawing.Size(229, 177);
             this.groupBox6.TabIndex = 39;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "通道1故障模拟";
@@ -1692,11 +1692,11 @@
             this.groupBox7.Controls.Add(this.button22);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox7.Location = new System.Drawing.Point(686, 185);
+            this.groupBox7.Location = new System.Drawing.Point(685, 185);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(228, 177);
+            this.groupBox7.Size = new System.Drawing.Size(229, 177);
             this.groupBox7.TabIndex = 39;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "通道2故障模拟";
@@ -1926,6 +1926,7 @@
             this.columnHeader10});
             this.listView2.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(0, 8);
             this.listView2.Margin = new System.Windows.Forms.Padding(2);
             this.listView2.Name = "listView2";
@@ -3368,7 +3369,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(655, 384);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(655, 380);
             this.tableLayoutPanel5.TabIndex = 8;
             // 
             // label_sc2
@@ -3420,7 +3421,7 @@
             this.dataGridView_sc2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_sc2.RowHeadersVisible = false;
             this.dataGridView_sc2.RowTemplate.Height = 23;
-            this.dataGridView_sc2.Size = new System.Drawing.Size(322, 358);
+            this.dataGridView_sc2.Size = new System.Drawing.Size(322, 354);
             this.dataGridView_sc2.TabIndex = 8;
             this.dataGridView_sc2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_sc2_CellContentClick);
             // 
@@ -3496,7 +3497,7 @@
             this.dataGridView_sc1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_sc1.RowHeadersVisible = false;
             this.dataGridView_sc1.RowTemplate.Height = 23;
-            this.dataGridView_sc1.Size = new System.Drawing.Size(321, 358);
+            this.dataGridView_sc1.Size = new System.Drawing.Size(321, 354);
             this.dataGridView_sc1.TabIndex = 7;
             this.dataGridView_sc1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_sc1_CellContentClick);
             // 
@@ -3676,6 +3677,48 @@
             this.dataGridView3.Size = new System.Drawing.Size(915, 82);
             this.dataGridView3.TabIndex = 5;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // Column_Name
+            // 
+            this.Column_Name.HeaderText = "通道名称";
+            this.Column_Name.Name = "Column_Name";
+            // 
+            // Column_saveEnable
+            // 
+            this.Column_saveEnable.HeaderText = "是否存盘";
+            this.Column_saveEnable.Name = "Column_saveEnable";
+            // 
+            // Column_btnSave
+            // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.NullValue = "选择";
+            this.Column_btnSave.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Column_btnSave.HeaderText = "选择路径";
+            this.Column_btnSave.Name = "Column_btnSave";
+            this.Column_btnSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column_btnSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column_foldertext
+            // 
+            this.Column_foldertext.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column_foldertext.HeaderText = "存盘路径";
+            this.Column_foldertext.Name = "Column_foldertext";
+            // 
+            // Column_RecvdTotal
+            // 
+            this.Column_RecvdTotal.HeaderText = "收到包数";
+            this.Column_RecvdTotal.Name = "Column_RecvdTotal";
+            // 
+            // Column_start
+            // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.NullValue = "停止";
+            this.Column_start.DefaultCellStyle = dataGridViewCellStyle19;
+            this.Column_start.HeaderText = "启动";
+            this.Column_start.Name = "Column_start";
+            this.Column_start.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column_start.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column_start.Text = "";
             // 
             // tabPage2
             // 
@@ -5815,7 +5858,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 28);
             this.button3.TabIndex = 2;
-            this.button3.Text = "开始读取";
+            this.button3.Text = "一键开始";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -6160,48 +6203,6 @@
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog_2";
-            // 
-            // Column_Name
-            // 
-            this.Column_Name.HeaderText = "通道名称";
-            this.Column_Name.Name = "Column_Name";
-            // 
-            // Column_saveEnable
-            // 
-            this.Column_saveEnable.HeaderText = "是否存盘";
-            this.Column_saveEnable.Name = "Column_saveEnable";
-            // 
-            // Column_btnSave
-            // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.NullValue = "选择";
-            this.Column_btnSave.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Column_btnSave.HeaderText = "选择路径";
-            this.Column_btnSave.Name = "Column_btnSave";
-            this.Column_btnSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column_btnSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column_foldertext
-            // 
-            this.Column_foldertext.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column_foldertext.HeaderText = "存盘路径";
-            this.Column_foldertext.Name = "Column_foldertext";
-            // 
-            // Column_RecvdTotal
-            // 
-            this.Column_RecvdTotal.HeaderText = "收到包数";
-            this.Column_RecvdTotal.Name = "Column_RecvdTotal";
-            // 
-            // Column_start
-            // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.NullValue = "停止";
-            this.Column_start.DefaultCellStyle = dataGridViewCellStyle19;
-            this.Column_start.HeaderText = "启动";
-            this.Column_start.Name = "Column_start";
-            this.Column_start.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column_start.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column_start.Text = "";
             // 
             // MainForm
             // 

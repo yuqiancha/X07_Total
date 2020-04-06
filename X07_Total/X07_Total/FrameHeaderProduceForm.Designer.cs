@@ -149,7 +149,6 @@
             this.Name = "FrameHeaderProduceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "接收遥控包参数配置";
-            this.Load += new System.EventHandler(this.FrameHeaderProduceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 

@@ -871,7 +871,7 @@ namespace X07_Total
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (this.button3.Text == "开始读取")
+            if (this.button3.Text == "一键开始")
             {
                 button2_Click(sender, e);
 
@@ -2433,7 +2433,7 @@ namespace X07_Total
                 }
             }
 
-            this.button3.Text = "开始读取";
+            this.button3.Text = "一键开始";
             this.button3.BackColor = Color.Aquamarine;
 
             RecvTag = false;

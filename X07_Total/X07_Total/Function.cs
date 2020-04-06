@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 
 namespace X07_Total
 {
@@ -12,19 +13,26 @@ namespace X07_Total
 
         public static void Init()
         {
-            for (int i = 0; i < 96; i++)
+            try
             {
-                Data.value_R1[i] = int.Parse(Data.GetConfigStr(Data.RconfigPath, "R_Channel_" + i.ToString(), "modify1"));
-                Data.value_R2[i] = int.Parse(Data.GetConfigStr(Data.RconfigPath, "R_Channel_" + i.ToString(), "modify2"));
-            }
+                for (int i = 0; i < 96; i++)
+                {
+                    Data.value_R1[i] = int.Parse(Data.GetConfigStr(Data.RconfigPath, "R_Channel_" + i.ToString(), "modify1"));
+                    Data.value_R2[i] = int.Parse(Data.GetConfigStr(Data.RconfigPath, "R_Channel_" + i.ToString(), "modify2"));
+                }
 
-            for (int i = 0; i < 128; i++)
+                for (int i = 0; i < 128; i++)
+                {
+                    Data.value_a[i] = double.Parse(Data.GetConfigStr(Data.DAconfigPath, "DAModifyA" + i.ToString(), "value"));
+                    Data.value_b[i] = double.Parse(Data.GetConfigStr(Data.DAconfigPath, "DAModifyB" + i.ToString(), "value"));
+                }
+
+                Trace.WriteLine("--完成--Function Init--");
+            }
+            catch(Exception ex)
             {
-                Data.value_a[i] = double.Parse(Data.GetConfigStr(Data.DAconfigPath, "DAModifyA" + i.ToString(), "value"));
-                Data.value_b[i] = double.Parse(Data.GetConfigStr(Data.DAconfigPath, "DAModifyB" + i.ToString(), "value"));
+                MessageBox.Show("未成功加载配置文件！ErrorCode:1", "错误信息", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             }
-
-            Trace.WriteLine("--完成--Function Init--");
         }
 
 
